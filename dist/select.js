@@ -194,7 +194,8 @@ uis.directive('uiSelectChoices',
 
       // Gets theme attribute from parent (ui-select)
       var theme = tElement.parent().attr('theme') || uiSelectConfig.theme;
-      return theme + '/choices.tpl.html';
+      // return theme + '/choices.tpl.html';
+      return 'scripts/layouts/partials/ui_select/choices.tpl.html';
     },
 
     compile: function(tElement, tAttrs) {
@@ -1040,7 +1041,8 @@ uis.directive('uiSelect',
     restrict: 'EA',
     templateUrl: function(tElement, tAttrs) {
       var theme = tAttrs.theme || uiSelectConfig.theme;
-      return theme + (angular.isDefined(tAttrs.multiple) ? '/select-multiple.tpl.html' : '/select.tpl.html');
+      // return theme + (angular.isDefined(tAttrs.multiple) ? '/select-multiple.tpl.html' : '/select.tpl.html');
+      return 'scripts/layouts/partials/ui_select/select.tpl.html';
     },
     replace: true,
     transclude: true,
@@ -1465,7 +1467,8 @@ uis.directive('uiSelectMatch', ['uiSelectConfig', function(uiSelectConfig) {
       var theme = getAttribute(parent, 'theme') || uiSelectConfig.theme;
       var multi = angular.isDefined(getAttribute(parent, 'multiple'));
 
-      return theme + (multi ? '/match-multiple.tpl.html' : '/match.tpl.html');      
+      // return theme + (multi ? '/match-multiple.tpl.html' : '/match.tpl.html');   
+      return 'scripts/layouts/partials/ui_select/match.tpl.html';
     },
     link: function(scope, element, attrs, $select) {
       $select.lockChoiceExpression = attrs.uiLockChoice;
@@ -1964,7 +1967,8 @@ uis.directive('uiSelectNoChoice',
       
                 // Gets theme attribute from parent (ui-select)
                 var theme = tElement.parent().attr('theme') || uiSelectConfig.theme;
-                return theme + '/no-choice.tpl.html';
+                // return theme + '/no-choice.tpl.html';
+                return 'scripts/layouts/partials/ui_select/no-choice.tpl.html';
             }
         };
     }]);
