@@ -8,6 +8,24 @@ AngularJS-native version of [Select2](http://ivaynberg.github.io/select2/) and [
 - [Examples Source](./docs/examples)
 - [Documentation](https://github.com/angular-ui/ui-select/wiki)
 
+## Dependencies
+Harus install [ngSanitize](https://docs.angularjs.org/api/ngSanitize) dan [Selectize](http://brianreavis.github.io/selectize.js/).
+
+### ngSanitize
+```
+$ npm install angular-sanitize --save
+```
+```
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+```
+### Selectize
+```
+$ bower install selectize#~0.8.5 --save
+```
+```
+<link rel="stylesheet" href="bower_components/selectize/dist/css/selectize.css">
+```
+
 ## Latest Changes
 
 - Check [CHANGELOG.md](/CHANGELOG.md)
