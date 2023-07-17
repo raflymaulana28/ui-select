@@ -385,21 +385,21 @@ uis.controller('uiSelectCtrl',
       }
       return result;
     }
- $scope.initSelect = function(){
-	ctrl.disabled = true
-	ctrl.search = null
-	ctrl.open = false
-	ctrl.searchInput[0].blur()
-	$timeout(function () {
-		ctrl.disabled = false
-		ctrl.focus = false
-	    ctrl.search = null
-	}, 500)
-  }
+ // $scope.initSelect = function(){
+	// ctrl.disabled = true
+	// ctrl.search = null
+	// ctrl.open = false
+	// ctrl.searchInput[0].blur()
+	// $timeout(function () {
+	// 	ctrl.disabled = false
+	// 	ctrl.focus = false
+	//     ctrl.search = null
+	// }, 500)
+ //  }
   // When the user clicks on ui-select, displays the dropdown list
   ctrl.activate = function(initSearchValue, avoidReset) {
     if (!ctrl.disabled  && !ctrl.open) {
-       $scope.initSelect()
+       // $scope.initSelect()
       if(!avoidReset) _resetSearchInput();
 
       $scope.$broadcast('uis:activate');
