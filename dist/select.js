@@ -404,6 +404,9 @@ uis.controller('uiSelectCtrl',
 
       var container = $element.querySelectorAll('.ui-select-choices-content');
       var searchInput = $element.querySelectorAll('.ui-select-search');
+      if(ctrl.open && searchInput.length > 0){
+        searchInput[0].type = 'search'
+      }
       if (ctrl.$animate && ctrl.$animate.on && ctrl.$animate.enabled(container[0])) {
         var animateHandler = function(elem, phase) {
           if (phase === 'start' && ctrl.items.length === 0) {
